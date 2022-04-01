@@ -10,7 +10,7 @@ var quadrado6 = document.getElementById('6');
 var quadrado7 = document.getElementById('7');
 var quadrado8 = document.getElementById('8');
 var quadrado9 = document.getElementById('9');
-
+var quadrados = document.getElementsByClassName('quadrado');
 mudarJogador('X');
 
 function escolherQuadrado(id) {
@@ -105,4 +105,18 @@ function checaSequencia(quadrado1, quadrado2, quadrado3){
     }
 
     return eIgual;
+}
+
+function reiniciar(){
+    vencedor = null;
+    vencedorSelecionado.innerHTML = '';
+
+    for (let i = 1; i <= 9; i++){
+        var quadrado = document.getElementById(i);
+        quadrado.style.background = '#eee';
+        quadrado.style.color = '#eee';
+        quadrado.innerHTML = '-';
+    }
+
+    mudarJogador('X')
 }
