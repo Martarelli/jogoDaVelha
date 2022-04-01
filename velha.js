@@ -14,6 +14,10 @@ var quadrado9 = document.getElementById('9');
 mudarJogador('X');
 
 function escolherQuadrado(id) {
+
+    if (vencedor !== null){
+        return;
+    }
     
     var quadrado = document.getElementById(id);
     if (quadrado.innerHTML !== '-') {
@@ -98,7 +102,6 @@ function checaSequencia(quadrado1, quadrado2, quadrado3){
 
     if(quadrado1.innerHTML !== '-' && quadrado1.innerHTML === quadrado2.innerHTML && quadrado2.innerHTML === quadrado3.innerHTML){
         eIgual = true;
-        console.log('aqui')
     }
 
     return eIgual;
