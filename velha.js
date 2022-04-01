@@ -59,6 +59,26 @@ function checaVencedor(){
         mudarVencedor(quadrado1);
         return;
     }
+    if (checaSequencia(quadrado2, quadrado5, quadrado8)){
+        mudarCorQuadrado(quadrado2, quadrado5, quadrado8);
+        mudarVencedor(quadrado2);
+        return;
+    }
+    if (checaSequencia(quadrado3, quadrado6, quadrado9)){
+        mudarCorQuadrado(quadrado3, quadrado6, quadrado9);
+        mudarVencedor(quadrado3);
+        return;
+    }
+    if (checaSequencia(quadrado1, quadrado5, quadrado9)){
+        mudarCorQuadrado(quadrado1, quadrado5, quadrado9);
+        mudarVencedor(quadrado1);
+        return;
+    }
+    if (checaSequencia(quadrado3, quadrado5, quadrado7)){
+        mudarCorQuadrado(quadrado3, quadrado5, quadrado7);
+        mudarVencedor(quadrado3);
+        return;
+    }
 
 }
 
